@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { ArrowUpRight, Mail, Menu } from "lucide-react";
 import { site } from "@/data/site";
-import ThreeHero from "@/components/ThreeHero";
+import VideoHero from "@/components/VideoHero";
+import ProjectVideo from "@/components/ProjectVideo";
 
 export default function Home() {
   return (
@@ -19,7 +19,10 @@ export default function Home() {
       </header>
 
       <section className="hero-section" id="top">
-        <ThreeHero />
+        <VideoHero src={site.hero.videoSrc} poster={site.hero.videoPoster} />
+      </section>
+
+      <section className="hero-content-section">
         <div className="hero-copy">
           <p className="eyebrow">{site.hero.eyebrow}</p>
           <h1>{site.hero.title}</h1>
@@ -87,9 +90,7 @@ export default function Home() {
         <div className="project-grid">
           {site.projects.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className="project-image">
-                <Image src={project.image} alt={project.title} fill sizes="(max-width: 900px) 100vw, 33vw" />
-              </div>
+              <ProjectVideo src={project.videoSrc} poster={project.poster} title={project.title} />
               <div className="project-meta">
                 <h3>{project.title}</h3>
                 <span>{project.type}</span>

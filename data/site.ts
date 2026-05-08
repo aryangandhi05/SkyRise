@@ -10,8 +10,15 @@ export type Service = {
 export type Project = {
   title: string;
   type: string;
-  image: string;
+  videoSrc: string;
+  poster: string;
 };
+
+const cloudinaryVideo = (path: string) =>
+  `https://res.cloudinary.com/dqz8j3poq/video/upload/f_auto,q_auto:good/${path}.mp4`;
+
+const cloudinaryPoster = (path: string) =>
+  `https://res.cloudinary.com/dqz8j3poq/video/upload/so_0,w_1100,q_auto,f_jpg/${path}.jpg`;
 
 export const site = {
   brand: "SkyRise AI",
@@ -23,7 +30,11 @@ export const site = {
     subtitle:
       "A premium website structure for SkyRise AI. Final copy, posts, videos, and project assets can be swapped from this data layer when you provide them.",
     primaryCta: "Start Project",
-    secondaryCta: "Explore Structure"
+    secondaryCta: "Explore Structure",
+    videoSrc:
+      "https://res.cloudinary.com/dqz8j3poq/video/upload/f_auto,q_auto:good/v1778250576/Skyrise-Master-video_rlztkr.mp4",
+    videoPoster:
+      "https://res.cloudinary.com/dqz8j3poq/video/upload/so_0,w_1800,q_auto,f_jpg/v1778250576/Skyrise-Master-video_rlztkr.jpg"
   },
   metrics: [
     ["24-48h", "delivery target"],
@@ -65,19 +76,58 @@ export const site = {
   ] satisfies Service[],
   projects: [
     {
-      title: "Brand Ad Short",
-      type: "Video / 9:16",
-      image: "https://img.youtube.com/vi/8tvQ4B09mbk/maxresdefault.jpg"
+      title: "Commercial Hotel Ad",
+      type: "Hospitality",
+      videoSrc: cloudinaryVideo("v1778251482/Copy_of_Hotel-sample-ai-video_rndhxr"),
+      poster: cloudinaryPoster("v1778251482/Copy_of_Hotel-sample-ai-video_rndhxr")
     },
     {
-      title: "Product Launch Short",
-      type: "Campaign / Launch",
-      image: "https://img.youtube.com/vi/zWZcuv-elXg/maxresdefault.jpg"
+      title: "Commercial Sunglasses Brand",
+      type: "Product / Commercial",
+      videoSrc: cloudinaryVideo("v1778251575/sunglass-ad-1_eou0t7"),
+      poster: cloudinaryPoster("v1778251575/sunglass-ad-1_eou0t7")
     },
     {
-      title: "Premium Static Creative",
-      type: "Poster / Paid Social",
-      image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=80"
+      title: "Street Fashion Men",
+      type: "Fashion",
+      videoSrc: cloudinaryVideo("v1778251585/street_fashion_men_e8ltmw"),
+      poster: cloudinaryPoster("v1778251585/street_fashion_men_e8ltmw")
+    },
+    {
+      title: "Blazer Ad",
+      type: "Fashion / Product Ad",
+      videoSrc: cloudinaryVideo("v1778251580/blazer-ad-1_ii0lqf"),
+      poster: cloudinaryPoster("v1778251580/blazer-ad-1_ii0lqf")
+    },
+    {
+      title: "Men Formal",
+      type: "Fashion / Formalwear",
+      videoSrc: cloudinaryVideo("v1778251597/men_formal_muvsia"),
+      poster: cloudinaryPoster("v1778251597/men_formal_muvsia")
+    },
+    {
+      title: "New Balance Commercial",
+      type: "Footwear / Commercial",
+      videoSrc: cloudinaryVideo("v1778251591/new-balance-ad-commercial_qwbssh"),
+      poster: cloudinaryPoster("v1778251591/new-balance-ad-commercial_qwbssh")
+    },
+    {
+      title: "Commercial Brand",
+      type: "Brand / Jewellery",
+      videoSrc: cloudinaryVideo("v1778251447/Video-2-Portfolio-1_ykpsv6"),
+      poster: cloudinaryPoster("v1778251447/Video-2-Portfolio-1_ykpsv6")
+    },
+    {
+      title: "Cafe/Restaurant",
+      type: "Food & Beverage (F&B)",
+      videoSrc: cloudinaryVideo("v1778251599/Hoogas-Sample_gdmubj"),
+      poster: cloudinaryPoster("v1778251599/Hoogas-Sample_gdmubj")
+    },
+    {
+      title: "Luxury Jewellery",
+      type: "Luxury / Product Video",
+      videoSrc: cloudinaryVideo("v1778251473/jewelry_p4q5yl"),
+      poster: cloudinaryPoster("v1778251473/jewelry_p4q5yl")
     }
   ] satisfies Project[],
   process: ["Brief", "Strategy", "Generate", "Refine", "Deliver"],

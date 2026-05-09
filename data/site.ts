@@ -14,6 +14,12 @@ export type Project = {
   poster: string;
 };
 
+export type Industry = {
+  icon: string;
+  title: string;
+  tags: string[];
+};
+
 const cloudinaryVideo = (path: string) =>
   `https://res.cloudinary.com/dqz8j3poq/video/upload/f_auto,q_auto:good/${path}.mp4`;
 
@@ -23,7 +29,7 @@ const cloudinaryPoster = (path: string) =>
 export const site = {
   brand: "SkyRise AI",
   email: "hello@skyrisedigitalsolutions.com",
-  nav: ["System", "Services", "Work", "Process", "Posts", "Contact"],
+  nav: ["System", "Services", "Work", "Industries", "Process", "Contact"],
   hero: {
     eyebrow: "AI-powered creative production",
     title: "Brand ads built at AI speed",
@@ -130,10 +136,42 @@ export const site = {
       poster: cloudinaryPoster("v1778251473/jewelry_p4q5yl")
     }
   ] satisfies Project[],
+  industries: [
+    {
+      icon: "🛒",
+      title: "E-commerce",
+      tags: ["Apparel", "Footwear", "Jewelry", "Beauty", "Furniture", "Toys", "Sports"]
+    },
+    {
+      icon: "🧠",
+      title: "SaaS / Tech / AI",
+      tags: ["Dashboards", "Automation", "Productivity", "AI Tools", "Launch Videos"]
+    },
+    {
+      icon: "🍔",
+      title: "Food & Beverage",
+      tags: ["Restaurants", "Cafes", "Packaged", "Delivery"]
+    },
+    {
+      icon: "🏋️",
+      title: "Fitness & Wellness",
+      tags: ["Gyms", "Supplements", "Trainers", "Health Tech"]
+    },
+    {
+      icon: "🏠",
+      title: "Real Estate & Interiors",
+      tags: ["Builders", "Home Design", "Lifestyle", "Staging"]
+    },
+    {
+      icon: "🔧",
+      title: "Service Businesses",
+      tags: ["Salons", "Clinics", "Cleaning", "Consulting"]
+    }
+  ] satisfies Industry[],
   process: ["Brief", "Strategy", "Generate", "Refine", "Deliver"],
   posts: [
-    "How AI creative pipelines shorten campaign timelines",
-    "What makes a scroll-stopping hook work",
-    "Static creative formats every brand should test"
+    { title: "How AI creative pipelines shorten campaign timelines", slug: "ai-creative-pipelines" },
+    { title: "What makes a scroll-stopping hook work", slug: "scroll-stopping-hook" },
+    { title: "Static creative formats every brand should test", slug: "static-creative-formats" }
   ]
 };

@@ -82,11 +82,7 @@ export default function Home() {
         </div>
 
         {/* ── Poster Creatives ── */}
-        <div className="poster-divider">
-          <span />
-          <p className="poster-divider-label">Poster Creatives</p>
-          <span />
-        </div>
+        <h3 className="poster-heading">Poster Creatives</h3>
 
         <div className="poster-grid-portrait">
           {site.posters.portrait.map((src, i) => (

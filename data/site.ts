@@ -136,6 +136,23 @@ export const site = {
       poster: cloudinaryPoster("v1778251473/jewelry_p4q5yl")
     }
   ] satisfies Project[],
+  posters: {
+    portrait: [
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358085/ads-1_qwkmkh.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358070/ads-variation_djhrdt.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358070/ads-3_dbqcle.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358070/square-4_izujij.png",
+    ],
+    landscape: [
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358102/12_vpi2wu.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358111/11_vqjlel.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358110/10_lpuhll.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358116/8_mwqevo.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358114/7_hsnqwx.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358117/13_ppzylp.png",
+      "https://res.cloudinary.com/dqz8j3poq/image/upload/v1778358117/9_yu2eqo.png",
+    ],
+  },
   industries: [
     {
       icon: "🛒",

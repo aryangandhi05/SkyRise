@@ -80,6 +80,33 @@ export default function Home() {
             </article>
           ))}
         </div>
+
+        {/* ── Poster Creatives ── */}
+        <div className="poster-divider">
+          <span />
+          <p className="poster-divider-label">Poster Creatives</p>
+          <span />
+        </div>
+
+        <div className="poster-grid-portrait">
+          {site.posters.portrait.map((src, i) => (
+            <div className="poster-portrait-card" key={i}>
+              <img src={src} alt={`Ad creative ${i + 1}`} loading="lazy" />
+            </div>
+          ))}
+        </div>
+
+        <div className="poster-grid-landscape">
+          {site.posters.landscape.map((src, i) => (
+            <img
+              key={i}
+              className="poster-landscape-img"
+              src={src}
+              alt={`Poster creative ${i + 1}`}
+              loading="lazy"
+            />
+          ))}
+        </div>
       </section>
 
       <section className="section" id="industries">

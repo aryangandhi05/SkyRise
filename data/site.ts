@@ -88,7 +88,7 @@ export const site = {
       poster: cloudinaryPoster("v1778251482/Copy_of_Hotel-sample-ai-video_rndhxr")
     },
     {
-      title: "Commercial Sunglasses Brand",
+      title: "Sunglasses Ad",
       type: "Product / Commercial",
       videoSrc: cloudinaryVideo("v1778251575/sunglass-ad-1_eou0t7"),
       poster: cloudinaryPoster("v1778251575/sunglass-ad-1_eou0t7")

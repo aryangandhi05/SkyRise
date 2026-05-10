@@ -402,7 +402,7 @@ h3 {
 /* ── Poster Creatives ───────────────────────────────────── */
 
 .poster-heading {
-  margin: 72px 0 40px;
+  margin: 120px 0 40px;
   font-family: var(--display);
   font-size: clamp(52px, 8vw, 140px);
   text-transform: uppercase;
